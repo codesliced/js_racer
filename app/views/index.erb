@@ -1,10 +1,10 @@
-<h1>FOX RACE</h1>
+<h1>GAME ON</h1>
 
 
 <div class="container">
   <table class="racer_table">
-    <tr id="player1_strip">
-      <td class="active"></td>
+     <tr id="player_squirrel_strip">
+      <td class="active_squirrel"></td>
       <td></td>
       <td></td>
       <td></td>
@@ -19,7 +19,7 @@
       <td></td>
       <td></td>
       <td></td>
-      <td id="finish_line1"></td>
+      <td id="finish_line_squirrel"></td>
     </tr>
     <tr class="gutter">
       <td></td>
@@ -27,8 +27,8 @@
       <td></td>
       <td></td>
     </tr>
-    <tr id="player2_strip">
-      <td class="active"></td>
+    <tr id="player_fox_strip">
+      <td class="active_fox"></td>
       <td></td>
       <td></td>
       <td></td>
@@ -43,15 +43,41 @@
       <td></td>
       <td></td>
       <td></td>
-      <td id="finish_line2"></td>
+      <td id="finish_line_fox"></td>
     </tr>
+    <tr class="gutter">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id="player_otter_strip">
+      <td class="active_otter"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td id="finish_line_otter"></td>
+    </tr>
+
   </table>
   
   <div class="winner">
     <h2>winner</h2>
-    <div><a href="/"><button class="myButton" id="start_over">Start Over</button></a></div>
-    <div><form action="/rematch/<%= @player1.id %>/<%= @player2.id %>" method="post"><input type="submit" id="rematch_btn" value="rematch"></form></div>
-  </div>
+    <div class="button bar">
+    <div class="win_buttons"><a href="/"><button class="myButton" id="start_over">Start Over</button></a></div>
+    <div class="win_buttons"><form action="/rematch/<%= @player1.id %>/<%= @player2.id %>" method="post"><input type="submit" id="rematch_btn" value="Rematch"></form></div>
+  </div></div>
 <script type="text/javascript">
     var player1_id = <%= @player1.id %>;
     var player2_id = <%= @player2.id %>;

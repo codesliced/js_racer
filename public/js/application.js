@@ -15,32 +15,32 @@ $(document).ready(function() {
       start = new Date();
     };
 
-    if (event.which === 81) {
-      var currentCol = $('#player1_strip .active');
+    if (event.which === 80) {
+      var currentCol = $('#player_fox_strip .active_fox');
 
-      currentCol.removeClass('active');
-      currentCol.next().addClass('active');
-      if (currentCol.next().attr('id') === "finish_line1") {
+      currentCol.removeClass('active_fox');
+      currentCol.next().addClass('active_fox');
+      if (currentCol.next().attr('id') === "finish_line_fox") {
         $(document).unbind('keyup');
         var end = new Date();
         var race_time = (end - start) / 1000
-        $('.winner h2').text('Player one rocks!!! ' + race_time + ' seconds! You so speeeeeedy!' );
+        $('.winner h2').text('You win, Speedy Foxzales! ' + race_time + ' seconds!' );
         $('.winner').show();
         var data = { 'time': race_time, 'winner': player1_id };
         save_to_db(data);
       }
     }
-    else if (event.which === 80) {
-      var currentCol = $('#player2_strip .active');
+    else if (event.which === 81) {
+      var currentCol = $('#player_squirrel_strip .active_squirrel');
 
-      currentCol.removeClass('active');
-      currentCol.next().addClass('active');
+      currentCol.removeClass('active_squirrel');
+      currentCol.next().addClass('active_squirrel');
 
-      if (currentCol.next().attr('id') === "finish_line2") {
+      if (currentCol.next().attr('id') === "finish_line_squirrel") {
         $(document).unbind('keyup');
         var end = new Date();
         var race_time = (end - start) / 1000
-        $('.winner h2').text('Player two rocks!!! ' + race_time + ' seconds! You so speeeeeedy!' );
+        $('.winner h2').text('You win, flying Squirrel! ' + race_time + ' seconds! You so speeeeeedy!' );
         $('.winner').show();
         var data = { 'time': race_time, 'winner': player2_id };
         save_to_db(data);
