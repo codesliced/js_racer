@@ -24,7 +24,7 @@ h1 {
   width: 100%;
 }
 
-#player_fox_strip {
+#player_80_strip {
   margin-bottom: 20px;
   padding: 5px 0;
   background-color: #660000;
@@ -34,7 +34,7 @@ h1 {
 }
 
 
-#player_squirrel_strip {
+#player_81_strip {
   margin-bottom: 20px;
   padding: 5px 0;
   background-color: #FFFFFF;
@@ -57,12 +57,12 @@ h1 {
   width: 20px;
 }
 
-.active_fox {
+.active_80 {
   background-image: url(../images/FoxWalk_52.gif);
   background-repeat: no-repeat;
 }
 
-.active_squirrel {
+.active_81 {
   background-image: url(../images/squirrel_52.gif);
   background-repeat: no-repeat;
 }
