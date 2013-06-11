@@ -17,11 +17,6 @@
       $(document).unbind('keyup');
       return "winner";
     }
-
-  //   var currentCol = $('#player_'+key+'_strip .active_'+key);
-
-  //   currentCol.removeClass('active_'+key);
-  //   currentCol.next().addClass('active_'+key);
   };
 
 

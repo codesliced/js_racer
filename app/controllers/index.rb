@@ -23,12 +23,15 @@ post '/rematch/:player1_id/:player2_id' do
 end
 
 post '/save_game' do
+  # p params
   time = params['time']
   winner = params['winner']
   # Game.last.time = time.to_i
+  player = Player.where("initials=?", winner).first
+
   Game.last.update_attribute(:time, time.to_f.round(3))
-  Game.last.update_attribute(:winner_id, winner.to_i)
-  # Game.last.winner_id = params['winner']
+  Game.last.update_attribute(:winner_id, player.id)
+  Game.last.winner_id = params['winner']
 end
 
 get '/game/:game_id' do
