@@ -6,18 +6,23 @@
 
 
   Player.prototype.move = function(key){
-    var currentCol = $('#player_'+key+'_strip .active_'+key);
+    this.currentCol = $('#player_'+key+'_strip .active_'+key);
 
-    currentCol.removeClass('active_'+key);
-    currentCol.next().addClass('active_'+key);
+    this.currentCol.removeClass('active_'+key);
+    this.currentCol.next().addClass('active_'+key);
   };
 
-  // Player.prototype.checkLocation = function(){
+  Player.prototype.checkLocation = function(key){
+    if (this.currentCol.next().attr('id') === 'finish_line_'+key) {
+      $(document).unbind('keyup');
+      return "winner";
+    }
+
   //   var currentCol = $('#player_'+key+'_strip .active_'+key);
 
   //   currentCol.removeClass('active_'+key);
   //   currentCol.next().addClass('active_'+key);
-  // };
+  };
 
 
   window.Player = Player;

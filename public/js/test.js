@@ -6,5 +6,6 @@ $(document).ready(function() {
 
   $(document).on('keyup', function(event) {
     game.onKeyUp(event.which);
+
   });
 });
