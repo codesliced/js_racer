@@ -3,6 +3,7 @@
         this.player1 = player1;
         this.player2 = player2;
         count = 0;
+        $('.winner').hide();
     }
 
     Game.prototype = {
@@ -37,7 +38,7 @@
                 'time': race_time,
                 'winner': player.initials()
             };
-            alert(data["winner"]);
+            // alert(data["winner"]);
             $.post('/save_game', data);
         },
 
@@ -46,6 +47,7 @@
             if (player.checkLocation(key) === "winner") {
                 this.stopTimers();
                 this.declareWinner(player);
+                console.log(player.initials());
                 this.saveToDB(player);
             }
         },

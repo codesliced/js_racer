@@ -4,6 +4,7 @@ $(document).ready(function() {
 
   var game = new Game(player1, player2);
 
+
   $(document).on('keyup', function(event) {
     game.onKeyUp(event.which);
 
