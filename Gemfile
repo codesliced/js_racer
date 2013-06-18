@@ -1,7 +1,7 @@
-source :rubygems
+source 'https://rubygems.org'
 
 # PostgreSQL driver
-gem 'pg', :group => :production
+gem 'pg'
 
 # Sinatra driver
 gem 'sinatra'
@@ -15,9 +15,9 @@ gem 'activerecord'
 
 gem 'rake'
 
-gem 'shotgun'
 
 group :test do
+	gem 'shotgun'
   gem 'faker'
   gem 'rspec'
 end
