@@ -1,7 +1,7 @@
 source :rubygems
 
 # PostgreSQL driver
-gem 'pg'
+gem 'pg', :group => :production
 
 # Sinatra driver
 gem 'sinatra'
